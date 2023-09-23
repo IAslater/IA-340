@@ -1,5 +1,4 @@
 --2.1 
-
 insert into student(s_email,s_name,major)
 values('s1@jmu.edu','s1','IA'),
 	('s2@jmu.edu','s2','IA'),
@@ -40,7 +39,6 @@ insert into course (c_number, c_name, room, p_email)
 values ('c4','facebook','r1', 'p3@jmu.edu'); 
 
 --You would change the profesor first becasue they are the foreign key (p-email) that way you retain referential integrity.
-
 
 
 
