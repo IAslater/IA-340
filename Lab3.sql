@@ -47,7 +47,7 @@ values ('c4','facebook','r1', 'p3@jmu.edu');
 --2.6 
 
 UPDATE course
-SET p_email = 'p3@jmu.edu'
+set p_email = 'p3@jmu.edu'
 WHERE p_email = 'p1@jmu.edu';
 DELETE from professor
 WHERE p_email = 'p1@jmu.edu';
@@ -67,8 +67,8 @@ select * from enroll
 select c_number, count(*) as num_student
 from enroll 
 group by c_number
-order by num_student desc
-limit 1;
+order BY num_student desc
+LIMIT 1;
 
 
 --2.9
@@ -82,10 +82,10 @@ on professor.p_email = course.p_email
 --2.10
 
   
-select p_name, count(*) as count_course
-from professor
-inner join course
-on professor.p_email = course.p_email
-group by p_name
-order by count_course desc
-limit 1;
+SELECT p_name, COUNT(*) AS count_course
+FROM professor
+INNER JOIN course
+ON professor.p_email = course.p_email
+GROUP BY p_name
+ORDER BY count_course DESC
+LIMIT 1;
